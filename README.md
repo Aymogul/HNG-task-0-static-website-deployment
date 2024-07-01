@@ -1,4 +1,4 @@
-# Deploying a Static Website on AWS Using Apache or nginx
+# Deploying a Static Website on AWS Using Apache 
 
 ### Prerequisites:
 - An AWS account.
@@ -10,72 +10,75 @@
 ### 1. Launch an EC2 Instance
 
 1. Log in to the AWS Management Console:
-   - Navigate to the EC2 Dashboard.
-   - Click "Launch Instance."
+   -- Navigate to the EC2 Dashboard.
+   -- Click "Launch Instance."
 
 2. Choose an Amazon Machine Image (AMI):
-   - Select an Amazon Linux 2 AMI.
+   -- Select an Amazon Linux 2 AMI.
 
 3. Select Instance Type:
-   - Choose an instance type (e.g., t2.micro for free tier eligibility).
+   -- Choose an instance type (e.g., t2.micro for free tier eligibility).
 
 4. Configure Instance Details:
-   - Configure as needed or use default settings.
+   -- Configure as needed or use default settings.
 
 5. Add Storage:
-   - Adjust storage settings if necessary.
+   -- Adjust storage settings if necessary.
 
 6. Configure Security Groups:
-   - Add rules to allow HTTP (port 80) and SSH (port 22) access.
+   -- Add rules to allow HTTP (port 80) and SSH (port 22) access.
 
 7. Review and Launch:
-   - Review the instance configuration.
-   - Launch the instance and select your key pair.
+   -- Review the instance configuration.
+   -- Launch the instance and select your key pair.
 
 ### 2. Connect to the EC2 Instance
 
 1. SSH into Your Instance:
    - Use the following command to connect to your instance (replace the path to your key pair and the instance public DNS):
-         ssh -i /path/to/your-key-pair.pem ec2-user@your-instance-public-dns
+   
+```sh
+   ssh -i /path/to/your-key-pair.pem ec2-user@your-instance-public-dns
+```
+         
      
 ### 3. Install and Configure Apache or nginx
 
 #### For Apache:
 
 1. Install Apache:
-     sudo yum update -y
-   sudo yum install httpd -y
-   
-2. Start and Enable Apache:
-     sudo systemctl start httpd
-   sudo systemctl enable httpd
-   
-#### For nginx:
+```sh
+sudo yum update -y
+sudo yum install httpd -y
+```    
 
-1. Install nginx:
-     sudo yum update -y
-   sudo amazon-linux-extras install nginx1 -y
-   
-2. Start and Enable nginx:
-     sudo systemctl start nginx
-   sudo systemctl enable nginx
+
+2. Start and Enable Apache:
+```sh
+   sudo systemctl start httpd
+   sudo systemctl enable httpd
+```
+     
    
 ### 4. Install Git and Clone Your Repository
 
-1. Install Git:
+ Install Git:
+```sh
      sudo yum install git -y
-   
-2. Clone Your Git Repository:
+```
+Clone Your Git Repository:
+```sh
      cd /tmp
-   git clone https://github.com/your-username/your-repository.git
-   
+   git clone https://github.com/Aymogul/HNG-task-0-static-website-deployment.git
+```
 ### 5. Deploy Your Static Website
 
 #### For Apache:
 
 1. Copy Website Files to Document Root:
+```sh
      sudo cp -r /tmp/your-repository/* /var/www/html/
-   
+```
    
 ### 6. Configure Security Groups
 
