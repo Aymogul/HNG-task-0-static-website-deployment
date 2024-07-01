@@ -10,39 +10,39 @@
 ### 1. Launch an EC2 Instance
 
 1. Log in to the AWS Management Console:
-   -- Navigate to the EC2 Dashboard.
-   -- Click "Launch Instance."
+- Navigate to the EC2 Dashboard.
+- Click "Launch Instance."
 
 2. Choose an Amazon Machine Image (AMI):
-   -- Select an Amazon Linux 2 AMI.
+- Select an Amazon Linux 2 AMI.
 
 3. Select Instance Type:
-   -- Choose an instance type (e.g., t2.micro for free tier eligibility).
+- Choose an instance type (e.g., t2.micro for free tier eligibility).
 
 4. Configure Instance Details:
-   -- Configure as needed or use default settings.
+- Configure as needed or use default settings.
 
 5. Add Storage:
-   -- Adjust storage settings if necessary.
+- Adjust storage settings if necessary.
 
 6. Configure Security Groups:
-   -- Add rules to allow HTTP (port 80) and SSH (port 22) access.
+- Add rules to allow HTTP (port 80) and SSH (port 22) access.
 
 7. Review and Launch:
-   -- Review the instance configuration.
-   -- Launch the instance and select your key pair.
+- Review the instance configuration.
+- Launch the instance and select your key pair.
 
 ### 2. Connect to the EC2 Instance
 
 1. SSH into Your Instance:
-   - Use the following command to connect to your instance (replace the path to your key pair and the instance public DNS):
+- Use the following command to connect to your instance (replace the path to your key pair and the instance public DNS):
    
 ```sh
    ssh -i /path/to/your-key-pair.pem ec2-user@your-instance-public-dns
 ```
          
      
-### 3. Install and Configure Apache or nginx
+### 3. Install and Configure Apache 
 
 #### For Apache:
 
