@@ -89,3 +89,5 @@ Clone Your Git Repository:
 
 1. Open a Web Browser:
    - Enter the public DNS or IP address of your EC2 instance to view your static website.
+
+
