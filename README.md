@@ -1,5 +1,8 @@
 # Deploying a Static Website on AWS Using Apache 
 
+![alt text](./screenshots/apache-install.PNG)
+![alt text](./screenshots/ec2-server.PNG)
+![alt text](./screenshots/hng-page.PNG)
 ### Prerequisites:
 - An AWS account.
 - A key pair for SSH access to the EC2 instance.
